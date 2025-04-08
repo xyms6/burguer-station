@@ -26,6 +26,7 @@ jobs:
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+          enable-AzPSSession: true
 
       - name: Deploy JAR
         uses: azure/webapps-deploy@v3
